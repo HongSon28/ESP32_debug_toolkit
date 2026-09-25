@@ -13,6 +13,7 @@
 - In the header file, write 2 functions: setup_device() and loop_device(), which correspond to setup() and loop() in a normal program.
 - Write the instruction clearly using comments inside the file
 - Update the device in README.md, including name, interface, dependencies
+- Create a Pull Request
 
 ## Supported device list ##
 | Device name | Interface | Dependencies |
