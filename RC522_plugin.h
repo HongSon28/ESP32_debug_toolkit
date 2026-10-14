@@ -1,3 +1,7 @@
+/*  This script uses the RC522 module to read an RFIC card/ tag
+    and prints its UID to the Serial Monitor
+*/
+
 #include <SPI.h>
 #include <MFRC522.h>
 
