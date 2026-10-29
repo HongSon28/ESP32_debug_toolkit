@@ -20,3 +20,4 @@
 | :---     | :---    | :---     |
 | MPU6500 | I2C | MPU9250_WE by Wolfgang |
 | RC522 | SPI  | MFRC522 by GithubCommunity  |
+| BMP280 | I2C  | Adafruit BMP280 by Adafruit  |
