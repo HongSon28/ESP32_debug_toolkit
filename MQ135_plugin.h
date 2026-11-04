@@ -7,16 +7,24 @@
    Never connect 5V AO/DO directly to ESP32 pins.
    Dependencies: ESP32 Arduino core only.
 */
+
 #include <Arduino.h>
+
 const int MQ135_PIN = 34;
-void setup_device() {
+
+void setup() {
+  Serial.begin(115200);
   analogReadResolution(12);
   analogSetPinAttenuation(MQ135_PIN, ADC_11db);
-  Serial.println("MQ135 ready (relative reading; warm up sensor)");
+
+  Serial.println("MQ135 Gas Sensor Ready!");
 }
-void loop_device() {
+
+void loop() {
   int raw = analogRead(MQ135_PIN);
   int mv = analogReadMilliVolts(MQ135_PIN);
-  Serial.printf("MQ135 ADC: %d / 4095, ESP32 pin: %d mV (uncalibrated)\n",raw,mv);
+
+  Serial.printf("MQ135 ADC: %d / 4095, Voltage: %d mV\n", raw, mv);
+
   delay(1000);
 }
